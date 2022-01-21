@@ -61,6 +61,11 @@ def main():
         type=int,
         default=1,
         help='Link thickness for visualization')
+    parser.add_argument(
+        '--max-frame-count',
+        type=int,
+        default=None,
+        help='limit number of frames')
 
     assert has_mmdet, 'Please install mmdet to run the demo.'
 
@@ -110,8 +115,12 @@ def main():
 
     # e.g. use ('backbone', ) to return backbone feature
     output_layer_names = None
-
+    frame_count = 0
+    
     while (cap.isOpened()):
+        frame_count += 1
+        if args.max_frame_count and frame_count > args.max_frame_count:
+            break
         flag, img = cap.read()
         if not flag:
             break

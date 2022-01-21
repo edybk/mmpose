@@ -11,7 +11,7 @@ from .bottom_up import (BottomUpAicDataset, BottomUpCocoDataset,
 from .face import (Face300WDataset, FaceAFLWDataset, FaceCocoWholeBodyDataset,
                    FaceCOFWDataset, FaceWFLWDataset)
 from .fashion import DeepFashionDataset
-from .hand import (FreiHandDataset, HandCocoWholeBodyDataset,
+from .hand import (FreiHandDataset, HandCocoWholeBodyDataset, APASDataset,
                    InterHand2DDataset, InterHand3DDataset, OneHand10KDataset,
                    PanopticDataset)
 from .mesh import (MeshAdversarialDataset, MeshH36MDataset, MeshMixDataset,
@@ -28,7 +28,7 @@ __all__ = [
     'TopDownCocoDataset', 'BottomUpCocoDataset', 'BottomUpMhpDataset',
     'BottomUpAicDataset', 'BottomUpCocoWholeBodyDataset', 'TopDownMpiiDataset',
     'TopDownMpiiTrbDataset', 'OneHand10KDataset', 'PanopticDataset',
-    'HandCocoWholeBodyDataset', 'FreiHandDataset', 'InterHand2DDataset',
+    'HandCocoWholeBodyDataset', 'FreiHandDataset','APASDataset', 'InterHand2DDataset',
     'InterHand3DDataset', 'TopDownOCHumanDataset', 'TopDownAicDataset',
     'TopDownCocoWholeBodyDataset', 'MeshH36MDataset', 'MeshMixDataset',
     'MoshDataset', 'MeshAdversarialDataset', 'TopDownCrowdPoseDataset',
