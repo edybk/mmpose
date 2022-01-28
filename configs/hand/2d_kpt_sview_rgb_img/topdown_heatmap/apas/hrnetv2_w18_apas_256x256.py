@@ -5,6 +5,7 @@ dataset_std = [0.2554, 0.2711, 0.2774]
 
 log_level = 'INFO'
 load_from = None
+load_from = 'https://download.openmmlab.com/mmpose/hand/hrnetv2/hrnetv2_w18_onehand10k_256x256-30bc9c6b_20210330.pth'
 resume_from = None
 dist_params = dict(backend='nccl')
 workflow = [('train', 1)]
@@ -132,8 +133,8 @@ val_pipeline = [
     dict(type='ToTensor'),
     dict(
         type='NormalizeTensor',
-        mean=[0.485, 0.456, 0.406],
-        std=[0.229, 0.224, 0.225]),
+        mean=dataset_mean,
+        std=dataset_std),
     dict(
         type='Collect',
         keys=['img'],
