@@ -7,10 +7,11 @@ from .onehand10k_dataset import OneHand10KDataset
 from .panoptic_hand2d_dataset import PanopticDataset
 from .rhd2d_dataset import Rhd2DDataset
 from .apas_dataset import APASDataset
+from .surgical_hands_dataset import SurgicalHands
 
 
 __all__ = [
     'FreiHandDataset', 'InterHand2DDataset', 'InterHand3DDataset',
     'OneHand10KDataset', 'PanopticDataset', 'Rhd2DDataset',
-    'HandCocoWholeBodyDataset', 'APASDataset'
+    'HandCocoWholeBodyDataset', 'APASDataset', 'SurgicalHands'
 ]
